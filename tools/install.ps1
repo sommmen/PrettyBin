@@ -6,7 +6,7 @@ $path = $project.FullName
 $appConfigItem = $project.ProjectItems | where {$_.Name -eq "App.config"}	
 if ($appConfigItem -eq $null)
 {
-	throw [System.IO.FileNotFoundException] "Project $path does not have App.config. PrettyBin is for exetutable projects only. "
+	throw [System.IO.FileNotFoundException] "Project $path does not have App.config. PrettyBin is for executable projects only. "
 }
  
 Write-Host 'Install PrettifyBin; '
